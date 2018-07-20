@@ -1,0 +1,23 @@
+HostKey /etc/ssh/ssh_host_ed25519_key
+HostKey /etc/ssh/ssh_host_rsa_key
+
+ChallengeResponseAuthentication no
+PasswordAuthentication no
+AllowGroups sftpuser
+AuthorizedKeysFile      /etc/ssh/authorized_keys/%u
+StrictModes no
+UseDNS no
+Subsystem sftp internal-sftp -u 0077
+PermitUserRC no
+PubkeyAcceptedKeyTypes ssh-ed25519,ssh-rsa
+
+Match Group sftpuser
+    AllowGroups sftpuser
+	ForceCommand internal-sftp -u 0077
+	PasswordAuthentication yes
+	MaxAuthTries 10
+	ChrootDirectory /srv/sftpuser
+	PermitTunnel no
+	AllowAgentForwarding no
+	AllowTcpForwarding no
+	X11Forwarding no
