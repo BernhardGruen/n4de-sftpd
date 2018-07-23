@@ -10,9 +10,16 @@ Benutzer können per Variable `USERS` konfiguriert werden. Der Inhalt sollte dab
   username:password:[disabled]
   ```
 
-Mit dem optionalen Flag _disabled_ kann ein Account deaktiviert werden.
+Mit dem optionalen Flag _disabled_ kann ein Account deaktiviert werden. 
 
-*In keinem Fall darf eine einmal angelegte Zeile wieder entfernt werden!*
+Die 3 Goldenen Regeln für Benutzernamen
+---------------------------------------
+
+1. Benutzernamen werden immer klein geschrieben und enthalten weder Sonder- noch Leerzeichen!
+
+1. In keinem Fall darf eine einmal angelegte Zeile wieder entfernt oder die Sortierung der Zeilen untereinander nachträglich verändert werden.
+
+1. Passwörter dürfen keine Sonderzeichen oder Leerzeichen enthalten. Die Passwortlänge liegt idealerweise bei >=12 Zeichen aus dem Alphabet `[A-Za-z0-9]` (Erstellbar z.B. mit `pwgen -s 12`).
 
 Public-Keys setzen
 ------------------

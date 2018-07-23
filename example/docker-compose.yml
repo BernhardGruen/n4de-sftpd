@@ -24,10 +24,11 @@ services:
     volumes: 
       - "sftpd-data:/srv/sftpuser"
     environment:
+      # NO REORDERING OR DELETION (USERS)
       USERS: |-
-        user1:password
+        user1:Gj6L4kLDM0ai
         user2::disabled
-        user3:password:disabled
+        user3:w1tBqrRIqkjX:disabled
         user4
       USER_DIRS_BASE: "order/intern order/extern invoice desadv"
       USER_DIRS_DEFAULT: "import export"
