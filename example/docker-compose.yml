@@ -30,45 +30,17 @@ services:
         user2::disabled
         user3:w1tBqrRIqkjX:disabled
         user4
-      USER_DIRS_BASE: "order/intern order/extern invoice desadv"
+      USER_DIRS_BASE: "order/intern order/extern invoice"
       USER_DIRS_DEFAULT: "import export"
       USER_DIRS_user1: "user1 individual"
-      USER_KEYS_user4: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN5gmQOtSe77frA6pLQvVx3VttCSFQguZE9Lm6/W4dQ0 bjmg@think23"
+      USER_KEYS_user4: "ssh-ed25519 [...] your name"
       HOST_PRIV_KEY_RSA: |-
         -----BEGIN RSA PRIVATE KEY-----
-        MIIEpAIBAAKCAQEAzoG17khz/rEkSVy2JdZB9VvFxZqc8xV/kuZhq/YJAErmQVx4
-        /wVJZumxulbaisYviPbcBHZ/xaKAqbldZvpY3eT8QJt6D//hlXl+Ikej1Q/QMJrP
-        hiApHxbHg2oyxyZ2iSElSrMT/y+kT7XmqLRQadJ59ZbpTIpyFTXhqrYafJQ+wPN2
-        Kk2l/fAGg+2UcMiNa8Fqy3BpzbzPGC7y41/3Iil5cuTbNdIPSNJxtR0n1kKrmy3D
-        0PlPfi1XupZvg8j0F0R+ozKD40lHFd2kbowhG3iTyPn//xwfk8kW6fV96GXuFzt0
-        jLs+QCIXWPhXbwuHN/OY04K6T5I0PgTO+NPNQQIDAQABAoIBAAkYz7HigTGcDhQp
-        QGDkUl2DoG+3Auj2bntDKNRRb04S/pesgiwByJz++HRT9Sad2mQ3M7QCoFhNc0uG
-        veWWa6nCt5YFA1iHFiHmizbpXv84xhwOBcxLyGP1Ne7FE92QBTK/QgxLXTsllyBn
-        y/RslQpEWlkGP9q+Uo46pGlHwlzweo8/5aN6vlRmDWommBzciEPQX0vTZU0Jcrh9
-        dUpAW/NVkWHSMStzJuF2/Ey8uo8zivb8+hC0Lat1kJfcYp/CpQ84110+Ic6JWlZt
-        htKzFMb0Ssjli+is+3wd/h2ukD3vS/yyntumJweVjdu2oxwRejpFFhVBdncsElE/
-        wBKLaF0CgYEA9396UAsVBqf8NdKmF2IUo4VDcsZuKUzjUOE2WMmsgjcq6KHGMdNG
-        RoDm0x8Im8qp4Ivzm7gj6KG4wbK9U+afiuf4Zuh1aMUcjg+9Fz6/IlmeV3ZQZxnF
-        JvDboYXM5GutdnxgK/Jx07kJa8yUdUClCmRcv9+hHJc1qG9PQz23MTcCgYEA1ZnA
-        XRDpMCByz+BdMKtU2DlBqUKTT3Nku1DvwQ3C3jNOTuXoN49i4GbscDwTA2flkdFt
-        UQD1d+snhjWESwqPlB1OKzrql0o7MAsEJ16g+IwFiAiAjwiNfbnwuAOIdlQPdnPg
-        Bc7Hzd2ASj//nBEWCN06EFfbQZ70C6Vhod+DkUcCgYBwcqrP0zkqXQhqK9rqpNVb
-        tiB+9Uj32scs6CYZEQgf4ZDNQTMbUDKNteMp6N+waNPmAbAc//zQpSmcV+lNRWsX
-        YW2q09MEVwoyQVRYS1nr8WvPsSG2ti6tEqG3MWN2JLYbL0dCsFSnLVrqb3jEDSrv
-        HcpGIwTASLNIY8pPcqrY4QKBgQCf0ebIu7p+tAiz2WBg5hEZp92lU5b9P44DSc/a
-        Vv2TXDgfeI6D49lLpjcK0yg2yCpRLK3qihkgnOZ52NkffMtpO3QdjHuyr2wRymxV
-        OMygq8QHwLTQUMntZI7kYGBeiQ74xkK8lbeSJUW0SKZsk6w0/bJQQCxhsRlRDXE7
-        uQ2sSQKBgQDOtnwksKvMqqv6KYn3eWbs2hbgGykBm91iJGjN3yvzaRdLBNCb5UhB
-        mcDLKE9BaSuKdPKb9AfoMfPNn4ab1yIl0fIJRZgVdOdX+9kxGxL2xF56CIv9nEvS
-        sFA1d8vUmoEeMkmvhU6cq3FDmG9RoNDU+EHOimqgjQe2Lnnd+jxgcQ==
+        paste your RSA host key here
         -----END RSA PRIVATE KEY-----
       HOST_PRIV_KEY_ED25519: |-
         -----BEGIN OPENSSH PRIVATE KEY-----
-        b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
-        QyNTUxOQAAACA6rreMGyvZtl5Mb9/gDaMa6XTDSL1UwB8ucUDuCWunYgAAAJjYKFCl2ChQ
-        pQAAAAtzc2gtZWQyNTUxOQAAACA6rreMGyvZtl5Mb9/gDaMa6XTDSL1UwB8ucUDuCWunYg
-        AAAEC9OHZryM8k1rfCM2RixdTUBpiIceqj/LaMrRgWcN/BLTqut4wbK9m2Xkxv3+ANoxrp
-        dMNIvVTAHy5xQO4Ja6diAAAAEXJvb3RAMjAzY2YzYTJhYWM2AQIDBA==
+        paste your ED25519 host key here
         -----END OPENSSH PRIVATE KEY-----
 
 volumes:
