@@ -40,5 +40,6 @@ COPY files/ /
 
 VOLUME [ "/srv/sftpuser" ]
 
+EXPORT 22
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
 CMD ["/usr/sbin/sshd","-D", "-e"]
