@@ -10,7 +10,7 @@ Benutzer können per Variable `USERS` konfiguriert werden. Der Inhalt sollte dab
   username:password:[disabled]
   ```
 
-Mit dem optionalen Flag _disabled_ kann ein Account deaktiviert werden. 
+Mit dem optionalen Flag _disabled_ kann ein Account deaktiviert werden.
 
 Die 3 Goldenen Regeln für Benutzernamen
 ---------------------------------------
@@ -28,7 +28,7 @@ Benutzern können über die Variablen `USER_KEYS_BASE`, `USER_KEYS_DEFAULT` sowi
 
 * Die Public-Keys aus `USER_KEYS_BASE` werden jedem Benutzer hinzugefügt.
 * Die Public-Keys aus `USER_KEYS_DEFAULT` werden einem Benutzer nur zugewiesen, wenn es keine benutzerspezifischen Public-Keys gibt.
-* Die Public-Keys aus `USER_KEYS_username` werden nur dem spezifizierten Benutzer hinzugefügt. Dabei ist exakt auf die Groß-/Kleinschreibung des Benutzernames zu achten.
+* Die Public-Keys aus `USER_KEYS_username` werden nur dem spezifizierten Benutzer hinzugefügt. Dabei ist exakt auf die Groß-/Kleinschreibung des Benutzernamens zu achten.
 
 Unterverzeichnisse automatisch erzeugen
 -----------------------------------------
@@ -39,7 +39,7 @@ _Die hier angegebenen Unterverzeichnisse werden nur für einen neu anzulegenden 
 
 * Die Verzeichnisse aus `USER_DIRS_BASE` werden bei jedem neu neu angelegten Benutzer erzeugt.
 * Die Verzeichnisse aus `USER_DIRS_DEFAULT` werden bei einem neu angelegten Benutzer nur erzeugt, wenn es keine benutzerspezifischen Verzeichnisse angegeben wurden.
-* Die Verzeichnisse aus `USER_DIRS_username` werden nur bei dem spezifizierten Benutzer hinzugefügt und nur dann, wenn dieser Benutzer nicht bereits vorher existierte. Dabei ist exakt auf die Groß-/Kleinschreibung des Benutzernames zu achten. Diese Variable überschreibt somit für den angegebenen Benutzer den Inhalt der Variablen `USER_DIRS_DEFAULT`.
+* Die Verzeichnisse aus `USER_DIRS_username` werden nur bei dem spezifizierten Benutzer hinzugefügt und nur dann, wenn dieser Benutzer nicht bereits vorher existierte. Dabei ist exakt auf die Groß-/Kleinschreibung des Benutzernamens zu achten. Diese Variable überschreibt somit für den angegebenen Benutzer den Inhalt der Variablen `USER_DIRS_DEFAULT`.
 
 Host-Keys definieren
 --------------------
