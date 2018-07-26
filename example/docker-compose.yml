@@ -2,7 +2,7 @@ version: "3.4"
 
 services:
   sftpd:
-    image: sftpd
+    image: n4de/sftpd:latest
     deploy:
       replicas: 1
       restart_policy:
@@ -34,14 +34,14 @@ services:
       USER_DIRS_DEFAULT: "import export"
       USER_DIRS_user1: "user1 individual"
       USER_KEYS_user4: "ssh-ed25519 [...] your name"
-      HOST_PRIV_KEY_RSA: |-
-        -----BEGIN RSA PRIVATE KEY-----
-        paste your RSA host key here
-        -----END RSA PRIVATE KEY-----
-      HOST_PRIV_KEY_ED25519: |-
-        -----BEGIN OPENSSH PRIVATE KEY-----
-        paste your ED25519 host key here
-        -----END OPENSSH PRIVATE KEY-----
+#      HOST_PRIV_KEY_RSA: |-
+#        -----BEGIN RSA PRIVATE KEY-----
+#        paste your RSA host key here
+#        -----END RSA PRIVATE KEY-----
+#      HOST_PRIV_KEY_ED25519: |-
+#        -----BEGIN OPENSSH PRIVATE KEY-----
+#        paste your ED25519 host key here
+#        -----END OPENSSH PRIVATE KEY-----
 
 volumes:
   sftpd-data:
