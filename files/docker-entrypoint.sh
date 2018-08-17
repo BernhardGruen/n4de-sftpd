@@ -89,7 +89,7 @@ if [ ${USERS+x} ]; then
 
 
         # Standardverzeichnisse erzeugen und Rechte passend ändern. Wird nur initial durchgeführt.
-        HOME_DIR=/srv/sftpuser/"$USERNAME"
+        HOME_DIR=/data/"$USERNAME"
         if [ ! -d "$HOME_DIR" ]; then        
             DIRS=$(eval test "\${USER_DIRS_$USERNAME+x}" && eval echo "\$USER_DIRS_$USERNAME" || echo "")
             
@@ -100,9 +100,9 @@ if [ ${USERS+x} ]; then
             DIRS="$DIRS $USER_DIRS_BASE"
             
             # Wenn keine Standardverzeichnisse angelegt werden nur Benutzerverzeichnis anlegen.
-            if [ -z "$DIRS" ]; then
-                mkdir -p "$HOME_DIR"
-            else
+            mkdir -p "$HOME_DIR"
+           
+            if [ -n "$DIRS" ]; then
                 _LOG_LINE="$_LOG_LINE  * Unterverzeichnisse erzeugt: \\n"
                 for DIR in $DIRS;
                 do

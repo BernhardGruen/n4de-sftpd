@@ -16,7 +16,7 @@ Match Group sftpuser
 	ForceCommand internal-sftp -u 0077
 	PasswordAuthentication yes
 	MaxAuthTries 10
-	ChrootDirectory /srv/sftpuser
+	ChrootDirectory /data
 	PermitTunnel no
 	AllowAgentForwarding no
 	AllowTcpForwarding no

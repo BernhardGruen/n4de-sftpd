@@ -22,7 +22,7 @@ services:
     ports:
       - "6666:22"
     volumes: 
-      - "sftpd-data:/srv/sftpuser"
+      - "sftpd-data:/data"
     environment:
       # NO REORDERING OR DELETION (USERS)
       USERS: |-

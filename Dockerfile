@@ -30,16 +30,16 @@ ENV USER_DIRS_DEFAULT ""
 # USER_DIRS_username: ""
 
 RUN addgroup -g 10000 sftpuser && \
-    mkdir -p /srv/sftpuser && \
-    chmod 710 /srv/sftpuser && \
-    chown root.sftpuser /srv/sftpuser
+    mkdir -p /data && \
+    chmod 710 /data && \
+    chown root.sftpuser /data
 
 RUN apk add -U openssh 
 
 COPY files/ /
 
-VOLUME [ "/srv/sftpuser" ]
+VOLUME [ "/data" ]
 
-EXPORT 22
+EXPOSE 22
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
 CMD ["/usr/sbin/sshd","-D", "-e"]
