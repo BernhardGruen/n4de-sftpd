@@ -9,7 +9,6 @@ StrictModes no
 UseDNS no
 Subsystem sftp internal-sftp -u 0077
 PermitUserRC no
-PubkeyAcceptedKeyTypes ssh-ed25519,ssh-rsa
 
 Match Group sftpuser
     AllowGroups sftpuser
