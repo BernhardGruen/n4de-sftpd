@@ -7,10 +7,11 @@ Benutzer definieren
 Benutzer können per Variable `USERS` konfiguriert werden. Der Inhalt sollte dabei wie folgt aussehen:
 
   ```shell
-  username:password:[disabled]
+  username:password:[disabled]:[dir1,dir2,dir2/sub,...]
   ```
 
 Mit dem optionalen Flag _disabled_ kann ein Account deaktiviert werden.
+Mit der optionalen vierten Spalte können Komma separiert (ohne Leerzeichen) benutzerspezifische Verzeichnisse angegeben werden.
 
 Die 3 Goldenen Regeln für Benutzernamen
 ---------------------------------------
@@ -33,13 +34,13 @@ Benutzern können über die Variablen `USER_KEYS_BASE`, `USER_KEYS_DEFAULT` sowi
 Unterverzeichnisse automatisch erzeugen
 -----------------------------------------
 
-Benutzern können über die Variablen `USER_DIRS_BASE`, `USER_DIRS_DEFAULT` sowie `USER_DIRS_username` Unterverzeichnisse mitgegeben werden. Die Variablen dürfen dabei jeweils mehrere Verzeichnisse und sogar komplexe Verzeichnisstrukturen beinhalten.
+Benutzern können über die Variablen `USERS`, `USER_DIRS_BASE`, `USER_DIRS_DEFAULT` sowie `USER_DIRS_username` Unterverzeichnisse mitgegeben werden. Die Variablen dürfen dabei jeweils mehrere Verzeichnisse und sogar komplexe Verzeichnisstrukturen beinhalten.
 
 _Die hier angegebenen Unterverzeichnisse werden nur für einen neu anzulegenden Benutzer erzeugt!_
 
 * Die Verzeichnisse aus `USER_DIRS_BASE` werden bei jedem neu neu angelegten Benutzer erzeugt.
 * Die Verzeichnisse aus `USER_DIRS_DEFAULT` werden bei einem neu angelegten Benutzer nur erzeugt, wenn es keine benutzerspezifischen Verzeichnisse angegeben wurden.
-* Die Verzeichnisse aus `USER_DIRS_username` werden nur bei dem spezifizierten Benutzer hinzugefügt und nur dann, wenn dieser Benutzer nicht bereits vorher existierte. Dabei ist exakt auf die Groß-/Kleinschreibung des Benutzernamens zu achten. Diese Variable überschreibt somit für den angegebenen Benutzer den Inhalt der Variablen `USER_DIRS_DEFAULT`.
+* Die Verzeichnisse aus `USER_DIRS_username` und `USERS` werden nur bei dem spezifizierten Benutzer hinzugefügt und nur dann, wenn dieser Benutzer nicht bereits vorher existierte. Dabei ist exakt auf die Groß-/Kleinschreibung des Benutzernamens zu achten. Diese Variable überschreibt somit für den angegebenen Benutzer den Inhalt der Variablen `USER_DIRS_DEFAULT`.
 
 Host-Keys definieren
 --------------------
