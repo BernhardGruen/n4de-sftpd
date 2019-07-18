@@ -42,6 +42,7 @@ if [ ${USERS+x} ]; then
         USERNAME=$(echo "$ENTRY" | cut -d ':' -f 1)
         PASSWORD=$(echo "$ENTRY" | cut -d ':' -f 2 -s)
         STATUS=$(echo "$ENTRY" | cut -d ':' -f 3 -s)
+        SUBDIRS=$(echo "$ENTRY" | cut -d ':' -f 4 -s | tr ',' ' ')
         
         USER_EXISTS=$(id "$USERNAME" 2> /dev/null || echo "")
         # Benutzer nur anlegen, wenn noch nicht existiert
@@ -92,12 +93,12 @@ if [ ${USERS+x} ]; then
         HOME_DIR=/data/"$USERNAME"
         if [ ! -d "$HOME_DIR" ]; then        
             DIRS=$(eval test "\${USER_DIRS_$USERNAME+x}" && eval echo "\$USER_DIRS_$USERNAME" || echo "")
-            
+
             # Wenn HOME_DIR existiert, keine neuen Verzeichnisse anlegen
-            if [ -z "$DIRS" ]; then
+            if [ -z "$DIRS" ] && [ -z "$SUBDIRS" ]; then
                 DIRS="$USER_DIRS_DEFAULT"
             fi    
-            DIRS="$DIRS $USER_DIRS_BASE"
+            DIRS="$DIRS $SUBDIRS $USER_DIRS_BASE"
             
             # Wenn keine Standardverzeichnisse angelegt werden nur Benutzerverzeichnis anlegen.
             mkdir -p "$HOME_DIR"
