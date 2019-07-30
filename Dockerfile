@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:3.10
 
 ENV UID_MIN "10001"
 
